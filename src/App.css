@@ -1,0 +1,111 @@
+/* General styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f4f8; /* Light, neutral background */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #333;
+}
+
+/* Heading */
+.heading {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #2c3e50; /* Dark grey for the heading */
+}
+
+/* Game Container */
+.game {
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #ffffff; /* Simple white background */
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for a clean card-like effect */
+  text-align: center;
+}
+
+/* Status and Reset Button */
+.status {
+  font-size: 1.1rem;
+  color: #2c3e50; /* Dark grey for text */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.reset-button {
+  background-color: #3498db; /* Calming blue for reset button */
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.reset-button:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+}
+
+/* Board and Cell Styles */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.cell {
+  background-color: #ecf0f1; /* Light grey background for cells */
+  border: 2px solid #bdc3c7; /* Softer grey borders */
+  font-size: 2rem;
+  color: #2c3e50; /* Dark grey text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.cell:hover {
+  background-color: #dfe6e9; /* Slightly darker grey on hover */
+  transform: scale(1.05); /* Gentle scaling effect */
+}
+
+.cell:disabled {
+  background-color: #bdc3c7; /* Disabled cells have a soft grey background */
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .game {
+    max-width: 280px;
+  }
+
+  .board {
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 80px);
+  }
+
+  .cell {
+    font-size: 1.5rem;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+}
